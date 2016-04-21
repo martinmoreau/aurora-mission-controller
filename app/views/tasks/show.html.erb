@@ -1,0 +1,16 @@
+<p>
+  <strong>Title:</strong>
+  <%= @task.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @task.body %>
+</p>
+
+<p>
+  <strong>Delegate:</strong>
+</p>
+
+<p><%= link_to 'Back', tasks_path %></p>
+<p><%= link_to 'Done', 'task#startTask' %></p>
