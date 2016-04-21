@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
 
-  resources :tasks
-  post 'tasks/:id/completeTask' => 'task#completeTask'
+  resources :tasks do
+    member do
+      post :complete
+    end
+  end
+  #post 'tasks/:id/completeTask' => 'task#completeTask'
 
   root 'tasks#index'
   # The priority is based upon order of creation: first created -> highest priority.

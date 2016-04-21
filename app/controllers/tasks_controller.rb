@@ -8,11 +8,13 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
   end
 
-  def completeTask
+  def complete
     @task = Task.find(params[:id])
-    #if not @task.isCompleted then
-    #  @task.isCompleted = true
-    render 'succes'
+    if @task.isCompleted != true then
+      @task.isCompleted = true
+      @task.save
     end
+
+    redirect_to @task
   end
 end

@@ -12,5 +12,10 @@
   <strong>Delegate:</strong>
 </p>
 
+<p>
+  <strong>completion:</strong>
+  <%= @task.isCompleted %>
+</p>
+
 <p><%= link_to 'Back', tasks_path %></p>
-<p><%= link_to 'Done', 'task#startTask' %></p>
+<p><%= link_to 'Completed', complete_task_path(@task), method: :post %></p>
